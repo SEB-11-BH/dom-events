@@ -11,6 +11,8 @@ function addTwoDoItem(){
     newTodoElement.textContent = todoInputElement.value
     console.log(newTodoElement)
 
+    todoListElement.appendChild(newTodoElement)
+
 
 }
 
