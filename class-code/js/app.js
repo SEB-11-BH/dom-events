@@ -23,3 +23,46 @@ function addTwoDoItem(){
 // addEventListener('eventType', function that runs)
 submitButtonElement.addEventListener('click',addTwoDoItem)
 
+
+
+// Exercise 1:
+// Create a + button and a - button
+// Under the buttons add a <p> tag that contains the number 0
+// When the user clicks on the + the number should go up
+// When the user clicks on the - the number should go down
+// BONUS: the number should not go below 0
+
+const plusButtonElement = document.querySelector('#plus-button')
+const minusButtonElement = document.querySelector('#minus-button')
+const resultElement = document.querySelector('#result')
+
+
+
+
+
+// function increaseNumber(){
+ 
+//     resultElement.textContent = Number(resultElement.textContent) + 1
+// }
+
+// function decreaseNumber(){
+//     resultElement.textContent = 
+//     Number(resultElement.textContent) - 1
+// }
+
+
+function increaseDecrease(event){
+    console.log(event.target.id)
+    if(event.target.id === 'plus-button'){
+        resultElement.textContent = Number(resultElement.textContent) + 1
+    }
+    else if(event.target.id === 'minus-button' && Number(resultElement.textContent)>0){
+         resultElement.textContent = Number(resultElement.textContent) - 1
+    }
+}
+
+
+plusButtonElement.addEventListener('click',increaseDecrease)
+minusButtonElement.addEventListener('click',increaseDecrease)
+
+
